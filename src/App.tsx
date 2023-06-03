@@ -1,24 +1,15 @@
 import { SafeAreaView, StyleSheet, Text } from 'react-native';
 import styled from 'styled-components/native';
-
-const TextNew = styled.Text`
-  font-size: 25px;
-  color: cyan;
-`;
+import Example from './Example';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <Text style={styles.container}>Testando123</Text>
-      <TextNew>NOVO TESTE</TextNew>
+      <Example text='Text Example 1'>Children example 1</Example>
+      <Example text='Text Example 2'>Children example 2</Example>
+      <Text>Testando</Text>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    color: 'green',
-  }
-})
 
 export default App;
