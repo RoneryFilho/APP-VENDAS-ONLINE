@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { useEffect, useState } from "react";
+import { Button, Text, View } from "react-native";
 
 interface ExampleProps {
     text?: string; //o ? determina que não é uma propriedade obrigatória de ser passada
@@ -6,10 +7,27 @@ interface ExampleProps {
 }
 
 const Example = ({children, text}: ExampleProps) => {
+    const [newText, setNewText] = useState();
+
+    useEffect(() => {
+        console.log('passou aqui');
+    }, [newText]);
+
+    const handleOnPress = () => {
+        setNewText('NOVO TEXT');
+    };
+
+    const resetaTexto = () => {
+        setNewText(undefined);
+    }
+
     return (
         <View>
             <Text style={{color: 'blue'}}>{children}</Text>
-            <Text style={{color: 'green'}}>{text}</Text>
+            <Text style={{color: 'green'}}>{newText || text}</Text>
+
+            <Button onPress={handleOnPress} title="Botão"/>
+            <Button onPress={resetaTexto} title="Botão Reset"/>
         </View>
     )
 };
