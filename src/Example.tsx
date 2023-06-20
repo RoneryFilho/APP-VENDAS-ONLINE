@@ -7,24 +7,26 @@ interface ExampleProps {
 }
 
 const Example = ({children, text}: ExampleProps) => {
-    const [newText, setNewText] = useState();
+    const [newText, setNewText] = useState<any>();
 
     useEffect(() => {
         console.log('passou aqui');
     }, [newText]);
 
     const handleOnPress = () => {
-        setNewText('NOVO TEXT');
+        setNewText('NOVO TEXTO');
+        console.log('pressionado');
     };
 
     const resetaTexto = () => {
         setNewText(undefined);
+        console.log('reseta texto');
     }
 
     return (
         <View>
             <Text style={{color: 'blue'}}>{children}</Text>
-            <Text style={{color: 'green'}}>{newText || text}</Text>
+            <Text style={{color: 'green', fontSize: 30}}>{newText || text}</Text>
 
             <Button onPress={handleOnPress} title="Botão"/>
             <Button onPress={resetaTexto} title="Botão Reset"/>
