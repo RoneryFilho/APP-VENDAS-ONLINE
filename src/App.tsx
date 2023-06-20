@@ -1,4 +1,4 @@
-import { FlatList, NativeSyntheticEvent, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TextInputChangeEventData } from 'react-native';
+import { FlatList, NativeSyntheticEvent, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TextInputChangeEventData, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import Example from './Example';
 import { useState } from 'react';
@@ -6,76 +6,15 @@ import { useState } from 'react';
 
 const App = () => {
 
-const list: string [] = [
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-  'teste',
-]
+const handleOnPress = () => {
+  console.log('Passou no touch')
+}
 
   return (
     <SafeAreaView>
-      <FlatList style={styles.flat} data={list} renderItem={({item}) => <Text style={styles.container}>{item}</Text>}/>
+      <TouchableOpacity onPress={handleOnPress}>
+        <Text style={styles.container}>CLIQUE</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -88,6 +27,7 @@ const styles = StyleSheet.create({
   },
   flat: {
     backgroundColor: 'blue',
+    height: 500
   },
 })
 
