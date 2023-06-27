@@ -1,7 +1,10 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { LoginContainer } from "../styles/login.style";
 import Input from "../../../shared/components/input/input";
 import Button from "../../../shared/components/button/Button";
+import Text from "../../../shared/text/text";
+import { Theme } from "../../../shared/themes/theme";
+import { texTypes } from "../../../shared/text/textTypes";
 
 
 
@@ -14,7 +17,7 @@ const Login = () => {
     return (
         <View>
             <LoginContainer>
-                <Text>Login</Text>
+                <Text type={texTypes.TITLE} color={Theme.colors.blackTheme.black}>Login</Text>
                 <Input/>
                 <Button title='ENTRAR' margin='16px' onPress={handleOnPress}/>
             </LoginContainer>
