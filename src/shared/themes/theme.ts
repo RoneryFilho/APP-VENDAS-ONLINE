@@ -1,9 +1,15 @@
-import { grayTheme, whiteTheme, blackTheme } from "./colors"
+import { buttonsTheme } from "./buttons"
+import { grayTheme, mainTheme, neutralTheme, pinkTheme, purpleTheme } from "./colors"
 
-export const Theme = {
+export const theme = {
     colors: {
         grayTheme,
-        whiteTheme,
-        blackTheme,
+        neutralTheme,
+        mainTheme,
+        purpleTheme,
+        pinkTheme,
+    },
+    buttons: {
+        buttonsTheme,
     }
 }
