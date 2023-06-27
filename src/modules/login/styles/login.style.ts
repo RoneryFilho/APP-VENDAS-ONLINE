@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const ContainerLogin = styled.View `
+export const LoginContainer = styled.View `
     height: 100%;
     width: 100%;
     background-color: aqua;

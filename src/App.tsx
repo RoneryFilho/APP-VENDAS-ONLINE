@@ -1,7 +1,8 @@
 import { SafeAreaView, Text} from 'react-native';
 import Login from './modules/login';
-import { ContainerLogin } from './modules/login/styles/login.style';
+import { LoginContainer } from './modules/login/styles/login.style';
 import Input from './shared/components/input/input';
+import Button from './shared/components/button/Button';
 
 
 const App = () => {
@@ -9,10 +10,7 @@ const App = () => {
 
   return (
     <SafeAreaView>
-       <ContainerLogin>
-        <Text>Teste</Text>
-        <Input/>
-       </ContainerLogin>
+       <Login/>
     </SafeAreaView>
   );
 };

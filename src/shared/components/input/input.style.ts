@@ -1,6 +1,6 @@
 import styled from "styled-components/native"
 
-export const ContainerInput = styled.TextInput `
+export const InputContainer = styled.TextInput `
     width: 100%;
     height: 44px;
     padding: 12px;
