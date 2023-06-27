@@ -17,7 +17,7 @@ const Login = () => {
     return (
         <View>
             <LoginContainer>
-                <Text type={texTypes.TITLE} color={Theme.colors.blackTheme.black}>Login</Text>
+                <Text type={texTypes.TITLE_BOLD} color={Theme.colors.blackTheme.black}>Login</Text>
                 <Input/>
                 <Button title='ENTRAR' margin='16px' onPress={handleOnPress}/>
             </LoginContainer>
