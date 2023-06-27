@@ -1,4 +1,4 @@
-import { SafeAreaView, Text} from 'react-native';
+import { SafeAreaView} from 'react-native';
 import Login from './modules/login';
 
 
