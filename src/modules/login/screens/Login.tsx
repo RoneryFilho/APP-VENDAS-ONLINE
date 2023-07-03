@@ -2,7 +2,7 @@ import { View } from "react-native";
 import { LoginContainer } from "../styles/login.style";
 import Input from "../../../shared/components/input/input";
 import Button from "../../../shared/components/button/Button";
-import Text from "../../../shared/text/text";
+import Text from "../../../shared/text/Text";
 import { theme } from "../../../shared/themes/theme";
 import { texTypes } from "../../../shared/text/textTypes";
 import { buttonsTheme } from "../../../shared/themes/buttons";
