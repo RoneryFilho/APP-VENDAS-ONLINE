@@ -20,7 +20,13 @@ const Login = () => {
             <LoginContainer>
                 <Text type={texTypes.TITLE_BOLD} color={theme.colors.neutralTheme.black}>Login</Text>
                 <Input/>
-                <Button type={buttonsTheme.primary} title='ENTRAR' margin='16px' onPress={handleOnPress}/>
+                <Button 
+                    type={buttonsTheme.primary} 
+                    title='ENTRAR' 
+                    margin='16px' 
+                    disabled
+                    onPress={handleOnPress}
+                />
             </LoginContainer>
         </View>
     );

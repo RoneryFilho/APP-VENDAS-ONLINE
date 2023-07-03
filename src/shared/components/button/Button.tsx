@@ -1,32 +1,60 @@
-import { TouchableOpacityProps } from "react-native";
-import { ButtonContainer, ButtonSecondary, GradientButton } from "./button.style";
+import { ActivityIndicator, TouchableOpacityProps } from "react-native";
+import { ActivityIndicatorButton, ButtonContainer, ButtonDisabled, ButtonSecondary, GradientButton } from "./button.style";
 import Text from "../../text/text";
 import { theme } from "../../themes/theme";
 import { texTypes } from "../../text/textTypes";
-import LinearGradient from 'react-native-linear-gradient';
 
 interface ButtonProps extends TouchableOpacityProps {
     title: string;
     margin?: string;
     type?: string;
+    disabled?: boolean;
+    loading?: boolean;
+    onPress?: () =>void;
 }
 
-const Button = ({ title, margin, type, ...props }: ButtonProps) => {
+const Button = ({ title, loading, disabled, onPress, margin, type, ...props }: ButtonProps) => {
+
+    const handleOnPress = () =>{
+        if (!loading && !disabled && onPress){
+            onPress();
+        }
+    }
+
+    const renderText = (color: string) => (
+        <>
+            <Text type={texTypes.BUTTON_BOLD} color={color}>
+                {title}
+            </Text>
+        
+            {loading && <ActivityIndicatorButton color={theme.colors.neutralTheme.white}/>}
+        </>
+    )
+    
+    if (disabled){
+        return (
+            <ButtonDisabled {...props} margin={margin}>
+                {renderText(theme.colors.neutralTheme.white)}
+            </ButtonDisabled>
+        )
+    }
 
     switch (type) {
         case theme.buttons.buttonsTheme.secondary:
-            return (<ButtonSecondary margin={margin} {...props}>
-                <Text type={texTypes.BUTTON_BOLD} color={theme.colors.mainTheme.primary}>{title}</Text>
+            return (
+            <ButtonSecondary {...props} margin={margin} onPress={handleOnPress} >
+                {renderText(theme.colors.mainTheme.primary)}
             </ButtonSecondary>);
         case theme.buttons.buttonsTheme.primary:
         default:
-            return (<ButtonContainer margin={margin} {...props}>
+            return (
+            <ButtonContainer margin={margin} {...props} onPress={handleOnPress}>
                 <GradientButton
                     colors={[theme.colors.purpleTheme.purple80,theme.colors.pinkTheme.pink80]}
                     start={{x: 0.0, y: 0.0}}
                     end={{x: 1.0, y: 1.0}}
                 >
-                    <Text type={texTypes.BUTTON_BOLD} color={theme.colors.neutralTheme.white}>{title}</Text>
+                    {renderText(theme.colors.neutralTheme.white)}
                 </GradientButton>
 
             </ButtonContainer>);
