@@ -1,11 +1,12 @@
 import { View } from "react-native";
-import { LoginContainer } from "../styles/login.style";
-import Input from "../../../shared/components/input/input";
+
 import Button from "../../../shared/components/button/Button";
+import Input from "../../../shared/components/input/input";
 import Text from "../../../shared/text/Text";
-import { theme } from "../../../shared/themes/theme";
 import { textTypes } from "../../../shared/text/textTypes";
 import { buttonsTheme } from "../../../shared/themes/buttons";
+import { theme } from "../../../shared/themes/theme";
+import { LoginContainer } from "../styles/login.style";
 
 
 
@@ -18,8 +19,7 @@ const Login = () => {
     return (
         <View>
             <LoginContainer>
-                {/* <Text type={textTypes.TITLE_BOLD} color={theme.colors.neutralTheme.black}>Login</Text> */}
-                <Input title="E-mail"/>
+                <Input  placeholder="Digite seu E-mail" placeholderTextColor={theme.colors.grayTheme.gray80} title="E-mail:"/>
                 <Button 
                     type={buttonsTheme.primary} 
                     title='ENTRAR' 

@@ -1,8 +1,9 @@
 import { ActivityIndicator, TouchableOpacityProps } from "react-native";
-import { ActivityIndicatorButton, ButtonContainer, ButtonDisabled, ButtonSecondary, GradientButton } from "./button.style";
+
 import Text from "../../text/Text";
-import { theme } from "../../themes/theme";
 import { textTypes } from "../../text/textTypes";
+import { theme } from "../../themes/theme";
+import { ActivityIndicatorButton, ButtonContainer, ButtonDisabled, ButtonSecondary, GradientButton } from "./button.style";
 
 interface ButtonProps extends TouchableOpacityProps {
     title: string;

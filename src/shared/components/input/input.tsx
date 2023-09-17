@@ -13,7 +13,7 @@ interface InputProps extends TextInputProps{
 const Input = ({title, ...props} : InputProps) => {
     return  <DisplayFlexColumn>
         {title && (
-            <Text color={theme.colors.grayTheme.gray100} type={textTypes.PARAGRAPH_SMALL_SEMI_BOLD}>
+            <Text margin="0px 0px 4px 4px" color={theme.colors.neutralTheme.black} type={textTypes.PARAGRAPH_SMALL_SEMI_BOLD}>
                 {title}
             </Text>
         )}
