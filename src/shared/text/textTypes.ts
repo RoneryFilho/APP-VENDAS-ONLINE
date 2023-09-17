@@ -1,4 +1,4 @@
-export enum texTypes {
+export enum textTypes {
     TITLE_BOLD = 'TITLE_BOLD', //24PX
     TITLE_REGULAR = 'TITLE_REGULAR',
     TITLE_LIGHT = 'TITLE_LIGHT',
