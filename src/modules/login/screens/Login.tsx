@@ -1,6 +1,7 @@
 import { View } from 'react-native';
 
 import Button from '../../../shared/components/button/Button';
+import { Icon } from '../../../shared/components/icon/icon';
 import Input from '../../../shared/components/input/input';
 import Text from '../../../shared/text/Text';
 import { textTypes } from '../../../shared/text/textTypes';
@@ -16,6 +17,7 @@ const Login = () => {
   return (
     <View>
       <LoginContainer>
+        <Icon name="home3" color="black" size={44}/>
         <Input
           errorMessage="Usuário ou senha inválidos"
           placeholder="Digite seu E-mail"
@@ -26,7 +28,6 @@ const Login = () => {
           type={buttonsTheme.primary}
           title="ENTRAR"
           margin="16px"
-          // disabled
           onPress={handleOnPress}
         />
       </LoginContainer>
