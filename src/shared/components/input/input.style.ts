@@ -23,6 +23,6 @@ export const InputContainer = styled.TextInput<InputContainerProps>`
 
 export const IconEye = styled(Icon)`
   position: absolute;
-  right: 12;
+  right: 12px;
   top: 8px;
 `

@@ -7,7 +7,7 @@ import Text from '../../../shared/text/Text';
 import { textTypes } from '../../../shared/text/textTypes';
 import { buttonsTheme } from '../../../shared/themes/buttons';
 import { theme } from '../../../shared/themes/theme';
-import { LoginContainer } from '../styles/login.style';
+import { ImageLogo, LoginContainer } from '../styles/login.style';
 
 const Login = () => {
   const handleOnPress = () => {
@@ -17,6 +17,7 @@ const Login = () => {
   return (
     <View>
       <LoginContainer>
+        <ImageLogo resizeMode='contain' source={require('../../../assets/images/logo.png')}/>
         <Input
           margin='0px 0px 8px 0px'
           placeholder="Digite seu E-mail"
