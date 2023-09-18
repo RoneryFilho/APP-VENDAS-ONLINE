@@ -17,19 +17,19 @@ const Login = () => {
   return (
     <View>
       <LoginContainer>
-        <Icon name="home3" color="black" size={44}/>
         <Input
-          errorMessage="Usuário ou senha inválidos"
+          margin='0px 0px 8px 0px'
           placeholder="Digite seu E-mail"
           placeholderTextColor={theme.colors.grayTheme.gray80}
           title="E-mail:"
         />
-        <Button
-          type={buttonsTheme.primary}
-          title="ENTRAR"
-          margin="16px"
-          onPress={handleOnPress}
+        <Input
+          secureTextEntry
+          placeholder="Digite sua senha"
+          placeholderTextColor={theme.colors.grayTheme.gray80}
+          title="Senha:"
         />
+        <Button type={buttonsTheme.primary} title="ENTRAR" margin="16px" onPress={handleOnPress} />
       </LoginContainer>
     </View>
   );
